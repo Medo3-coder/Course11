@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+void passByValue( int x)
+{
+    // x is copy of ali it doesn't have any access of ali it self
+    //copy has no effect on the originls
+   x = 99; 
+}
+void passByRefrence(int *x)
+{
+    // *x becasue can hold the memory address
+    // now take the memory address an sets it = 66 
+    *x=66;
+}
+
+
+int main()
+{
+  int ali = 15 ;
+  int hossam = 10 ;
+  
+  passByValue(ali);
+  passByRefrence(&hossam);  //we take the memory address of the variable 
+  cout<< "ali is now  :" <<ali <<endl;
+  cout<< "hossam is now :  "<<hossam <<endl;
+  
+  
