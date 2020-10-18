@@ -1,0 +1,35 @@
+/* What is Recursion?
+The process in which a function calls itself directly or indirectly is 
+called recursion and the corresponding function is called as recursive function.
+Using recursive algorithm, certain problems can be solved quite easily
+*/
+
+
+#include <iostream>
+
+using namespace std;
+
+
+int factFinder ( int x)
+
+{
+   if (x == 1 )
+   return 1 ;
+   else 
+   {
+       return x*factFinder(x-1) ;
+   }
+       
+}
+
+
+
+int main()
+
+{ 
+    int x ;
+    cout<< " enter a number \n"<<endl ;
+    cin>>x;
+    cout<< "fact = "<< factFinder(x) <<endl;
+    
+}
