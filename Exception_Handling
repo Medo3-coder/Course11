@@ -1,0 +1,27 @@
+
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+try 
+{
+    int answer ;
+    cout <<" 5+7 = ";
+    cin >> answer ;
+     if (answer !=12) 
+        throw "Error . Worng answer \n";
+        cout << "good right answer \n" ;
+        
+}
+
+catch(const char * str)
+{
+    cout << "Exception " << str <<endl; 
+    
+}
+
+    return 0;
+}
