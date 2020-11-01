@@ -1,0 +1,40 @@
+
+
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+    try 
+    {
+        int A[10] = {1,2,3,4,5,6,7,8,9,10};
+        int index ;
+        cout << "Enter Index : ";
+        cin >> index ; 
+          if (index < 0 )
+            throw "Error Negative Index ";
+          if (index >= 10)
+            throw index ;
+            for (int i = 0 ; i <= index ; i++)
+            {
+                cout << A[i] <<endl;
+            }
+    }
+    
+    catch (int i)
+    {
+        cout << "Exception :" ;
+        cout << "index " << i << " out of range " <<endl;
+    }
+    
+    catch(const char * str)
+    {
+        cout << "Exception : " << str <<endl;
+    }
+
+
+
+    return 0;
+}
